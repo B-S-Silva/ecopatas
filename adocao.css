@@ -305,4 +305,98 @@ h2 {
     color: #f44336; /* Muda a cor quando favoritado */
     transform: scale(1.2); /* Aumenta o tamanho do ícone quando favoritado */
 }
+/* Estilo para os banners das seções */
+.banner {
+    width: 100%;
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.banner-caes {
+    background: linear-gradient(to right, #FF7F50, #FF6347); /* Gradiente laranja */
+}
+
+.banner-gatos {
+    background: linear-gradient(to right, #6A5ACD, #8A2BE2); /* Gradiente roxo */
+}
+
+.banner-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+.banner h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Shrikhand', cursive;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Sigmar', cursive;
+}
+
+.btn-banner {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-banner:hover {
+    background-color: #28a745;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-banner:focus {
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 28px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .btn-banner {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h2 {
+        font-size: 24px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .btn-banner {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
 
