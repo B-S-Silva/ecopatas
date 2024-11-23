@@ -197,54 +197,66 @@ body {
     background-color: #f7f7f7;
 }
 
-/* Footer */
 footer {
     background-color: #f9f9f9;
-    padding: 40px 20px;
+    padding: 40px 20px; /* Espaço interno para dar margem entre o conteúdo e a borda */
+    margin: 0; /* Remover margens externas */
+    width: 100%; /* Garante que o footer ocupe 100% da largura */
+    box-sizing: border-box; /* Inclui o padding dentro da largura total */
+    border-top: 1px solid #ddd; /* Linha antes do conteúdo do footer */
 }
+
 .footer-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
+    width: 100%; /* Garante que a largura do container ocupe 100% */
+    margin: 0; /* Remover margens */
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
 .footer-section {
-    flex: 1;
-    min-width: 150px;
+    flex: 1 1 200px; /* Permitindo que as seções ocupem o espaço disponível */
+    min-width: 200px; /* Tamanho mínimo ajustado */
     margin: 10px;
 }
+
 .footer-section h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .footer-section h3 {
     font-size: 14px;
     color: #888;
     margin-bottom: 10px;
 }
+
 .footer-section p {
     color: #aaa;
     font-size: 14px;
     line-height: 1.5;
 }
+
 .footer-section ul {
     list-style-type: none;
 }
+
 .footer-section ul li {
     margin: 5px 0;
 }
+
 .footer-section ul li a {
     text-decoration: none;
     color: black;
     font-size: 14px;
 }
+
 .footer-section ul li a:hover {
     text-decoration: underline;
 }
+
 .newsletter input[type="email"] {
     padding: 5px;
     border: none;
@@ -252,6 +264,7 @@ footer {
     margin-right: 10px;
     font-size: 14px;
 }
+
 .newsletter button {
     background-color: black;
     color: white;
@@ -260,21 +273,25 @@ footer {
     font-size: 14px;
     cursor: pointer;
 }
+
 .footer-icons {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
+
 .footer-icons img {
     width: 200px;
-    transform: translate(-50px);
+    /* Remover o transform se não for necessário */
 }
+
+/* Linha antes da mensagem de copyright */
 .footer-note {
     text-align: center;
     color: #888;
     font-size: 12px;
     margin-top: 30px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ddd; /* Linha antes do texto de copyright */
     padding-top: 10px;
 }
 /* Banner */
@@ -755,30 +772,6 @@ p {
     border-radius: 15px;
 }
 
-.paginacao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #6b5b95;
-}
-
-.paginas {
-    display: flex;
-    gap: 8px;
-}
-
-.paginas a, .pagina-ativa {
-    padding: 5px 10px;
-    color: #6b5b95;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-.pagina-ativa {
-    background-color: #e0e0e0;
-}
 
 @media (max-width: 768px) {
     .grid-cards {

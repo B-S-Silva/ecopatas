@@ -5,11 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecopatas</title>
     <link rel="stylesheet" href="stylenovidades.css">
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+        /* Estilos para os cards e paginação */
+        .grid-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card .conteudo {
+            padding: 10px;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            width: 100%;
+        }
+        .pagination button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            margin: 0 5px; /* Espaço entre os botões */
+        }
+        .pagination button:hover {
+            background-color: #005f6b;
+        }
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .pagination .page-numbers {
+            display: inline-block;
+            margin: 0 5px; /* Espaço entre os números */
+        }
+        .pagination .page-numbers.active {
+            background-color: #005f6b;
+            color: white;
+        }
     </style>
-    
+</head>
 <body>
 
     <!-- Navbar -->
@@ -32,20 +80,9 @@
             <a href="#"><img src="carrinho.png" alt="Carrinho"></a>
             <a href="#"><img src="usuario.png" alt="usuario"></a>
         </div>
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> 
 
+    <br><br><br><br><br><br> 
     <div class="novidades-recentes">
         <h2>Novidades recentes</h2>
         
@@ -97,140 +134,125 @@
     <br>
     <br>
     <br> 
+
     <div class="todas-novidades">
         <h2>Todas novidades</h2>
-        
-        <div class="grid-cards">
-            <div class="card">
-                <img src="pet1.jpg" alt="Imagem 1">
-                <div class="conteudo">
-                    <p class="autor">Alec Whitten • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
-                    <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <img src="pet1.jpg" alt="Imagem 2">
-                <div class="conteudo">
-                    <p class="autor">Demi Wilkinson • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
-                    <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="pet1.jpg" alt="Imagem 3">
-                <div class="conteudo">
-                    <p class="autor">Candice Wu • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
-                    <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="pet1.jpg" alt="Imagem 4">
-                <div class="conteudo">
-                    <p class="autor">Natali Craig • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
-                    <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="pet1.jpg" alt="Imagem 5">
-                <div class="conteudo">
-                    <p class="autor">Drew Cano • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
-                    <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="card">
-                <img src="pet1.jpg" alt="Imagem 6">
-                <div class="conteudo">
-                    <p class="autor">Orlando Diggs • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
-                    <div class="tags">
-                        <span>Podcasts</span>
-                    </div>
-                </div>
-            </div>
+
+        <div class="grid-cards" id="card-container">
+            <!-- Cards serão injetados aqui pelo JS -->
         </div>
-        
-        <div class="paginacao">
-            <a href="#">&#8592; Anterior</a>
-            <div class="paginas">
-                <a href="#" class="pagina-ativa">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
+
+        <!-- Paginação -->
+        <div class="pagination">
+            <button id="prev" onclick="changePage(-1)" disabled>&laquo; Anterior</button>
+            <div class="page-numbers-container">
+                <!-- Os números das páginas serão injetados aqui pelo JS -->
             </div>
-            <a href="#">Próximo &#8594;</a>
+            <button id="next" onclick="changePage(1)">Próxima &raquo;</button>
         </div>
     </div>
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> 
     <footer>
         <div class="footer-container">
-          <div class="footer-section">
-            <h2>Ecopatas.</h2>
-            <p>Av. Águia de Haia, 2633 - Cidade Antônio Estêvão de Carvalho, São Paulo - SP, 03694-000</p>
-          </div>
-          <div class="footer-section">
-            <h3>Links</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Ongs</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Ajuda</h3>
-            <ul>
-              <li><a href="#">Devolução</a></li>
-              <li><a href="#">Políticas de Privacidade</a></li>
-            </ul>
-          </div>
-          <div class="footer-section newsletter">
-            <h3>Newsletter</h3>
-            <input type="email" placeholder="Digite seu e-mail">
-            <button>INSCREVA-SE</button>
-            <div class="footer-icons">
-              <img src="logo cão e gato.png" alt="Ícone de cachorro e gato">
+            <div class="footer-section">
+                <h2>Ecopatas.</h2>
+                <p>Av. Águia de Haia, 2633 - Cidade Antônio Estêvão de Carvalho, São Paulo - SP, 03694-000</p>
             </div>
-          </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ongs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#">Devolução</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <input type="email" placeholder="Digite seu e-mail">
+                <button>INSCREVA-SE</button>
+                <div class="footer-icons">
+                    <img src="logo cão e gato.png" alt="Ícone de cachorro e gato">
+                </div>
+            </div>
         </div>
         <p class="footer-note">2024 ecopatas. Todos direitos reservados</p>
-      </footer>
-
-    </body>
-    </html>
+    </footer>
+    <script>
+        const cards = [
+            { autor: 'Alec Whitten', data: '1 Jan 2024', titulo: 'Título provisório', descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', tags: ['Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum'], imagem: 'pet1.jpg' },
+            // (restante dos cards)
+        ];
+    
+        let currentPage = 1;
+        const itemsPerPage = 6;
+    
+        function generateCards(page) {
+            const startIndex = (page - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const cardsToDisplay = cards.slice(startIndex, endIndex);
+    
+            const cardContainer = document.getElementById('card-container');
+            cardContainer.innerHTML = '';
+    
+            cardsToDisplay.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                cardElement.innerHTML = `
+                    <img src="${card.imagem}" alt="Imagem">
+                    <div class="conteudo">
+                        <p class="autor">${card.autor} • ${card.data}</p>
+                        <h3>${card.titulo}</h3>
+                        <p>${card.descricao}</p>
+                        <div class="tags">
+                            ${card.tags.map(tag => `<span>${tag}</span>`).join(' ')}
+                        </div>
+                    </div>
+                `;
+                cardContainer.appendChild(cardElement);
+            });
+    
+            document.getElementById('prev').disabled = page === 1;
+            document.getElementById('next').disabled = page * itemsPerPage >= cards.length;
+    
+            generatePagination();
+        }
+    
+        function generatePagination() {
+            const totalPages = Math.ceil(cards.length / itemsPerPage);
+            const pageNumbersContainer = document.querySelector('.page-numbers-container');
+            pageNumbersContainer.innerHTML = '';
+    
+            for (let i = 1; i <= totalPages; i++) {
+                const pageNumber = document.createElement('button');
+                pageNumber.classList.add('page-numbers');
+                if (i === currentPage) {
+                    pageNumber.classList.add('active');
+                }
+                pageNumber.innerText = i;
+                pageNumber.onclick = () => {
+                    currentPage = i;
+                    generateCards(currentPage);
+                };
+                pageNumbersContainer.appendChild(pageNumber);
+            }
+        }
+    
+        function changePage(direction) {
+            currentPage += direction;
+            generateCards(currentPage);
+        }
+    
+        generateCards(currentPage);
+    </script>
+    
+    
+</body>
+</html>

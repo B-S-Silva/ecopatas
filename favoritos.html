@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - Adote um Pet</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&family=Sigmar&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #DCC59A;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Shrikhand', cursive;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .logo .logo-img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar nav .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar nav .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav .nav-links li a:hover {
+    color: #A28F58;
+}
+
+.navbar .nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .nav-icons a img {
+    width: 40px;
+    height: 40px;
+    filter: invert(90%);
+    transition: filter 0.3s ease;
+}
+
+.navbar .nav-icons a:hover img {
+    filter: invert(50%) sepia(1) saturate(5) hue-rotate(20deg);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            width: 200px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 1em;
+            margin: 10px 0;
+            color: #555;
+        }
+        .card-code {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .btn-adotar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .btn-adotar:hover {
+            background-color: #45a049;
+        }
+        .heart-btn {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: red;
+        }
+        .heart-btn.favorited {
+            color: darkred;
+        }
+        footer {
+    background-color: #f9f9f9;
+    padding: 40px 20px; /* Espaço interno para dar margem entre o conteúdo e a borda */
+    margin: 0; /* Remover margens externas */
+    width: 100%; /* Garante que o footer ocupe 100% da largura */
+    box-sizing: border-box; /* Inclui o padding dentro da largura total */
+    border-top: 1px solid #ddd; /* Linha antes do conteúdo do footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Garante que a largura do container ocupe 100% */
+    margin: 0; /* Remover margens */
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1 1 200px; /* Permitindo que as seções ocupem o espaço disponível */
+    min-width: 200px; /* Tamanho mínimo ajustado */
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.newsletter button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-icons img {
+    width: 200px;
+    /* Remover o transform se não for necessário */
+}
+
+/* Linha antes da mensagem de copyright */
+.footer-note {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    margin-top: 30px;
+    border-top: 1px solid #ddd; /* Linha antes do texto de copyright */
+    padding-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo png.png" alt="Logo Ecopatas" class="logo-img">
+            <span>Ecopatas</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Ongs</a></li>
+                <li><a href="#">Espaços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><img src="telefone.png" alt="Telefone"></a>
+            <a href="favoritos.html"><img src="coração.png" alt="Coração"></a>
+            <a href="#"><img src="carrinho.png" alt="Carrinho"></a>
+            <a href="#"><img src="usuario.png" alt="usuario"></a>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<header>
+    <h1>Favoritos</h1>
+    <p>Aqui estão seus pets favoritos. Você pode removê-los a qualquer momento.</p>
+</header>
+
+<div class="content" id="favoritos-section">
+    <!-- Os favoritos serão exibidos aqui dinamicamente -->
+</div>
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Ecopatas.</h2>
+        <p>Av. Águia de Haia, 2633 - Cidade Antônio Estêvão de Carvalho, São Paulo - SP, 03694-000</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Ongs</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Ajuda</h3>
+        <ul>
+          <li><a href="#">Devolução</a></li>
+          <li><a href="#">Políticas de Privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <input type="email" placeholder="Digite seu e-mail">
+        <button>INSCREVA-SE</button>
+        <div class="footer-icons">
+          <img src="logo cão e gato.png" alt="Ícone de cachorro e gato">
+        </div>
+      </div>
+    </div>
+    <p class="footer-note">2024 ecopatas. Todos direitos reservados</p>
+  </footer>
+
+<script>
+    // Dados fictícios de animais favoritos
+    const favoritos = [
+        { nome: "Cão 1", descricao: "Cão 1 é brincalhão e cheio de energia.", codigo: "C0001", imagem: "https://via.placeholder.com/150" },
+        { nome: "Gato 2", descricao: "Gato 2 adora um bom carinho no colo.", codigo: "G0002", imagem: "https://via.placeholder.com/150" }
+    ];
+
+    // Função para gerar cards de favoritos
+    function generateCards(data, sectionId) {
+        const section = document.getElementById(sectionId);
+        section.innerHTML = ''; // Limpar a seção
+
+        data.forEach((animal, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
+                <button class="heart-btn favorited" onclick="removeFavorite(${index})">
+                    ❤️
+                </button>
+                <img src="${animal.imagem}" alt="${animal.nome}">
+                <div class="card-body">
+                    <h3 class="card-title">${animal.nome}</h3>
+                    <p class="card-text">${animal.descricao}</p>
+                    <p class="card-code"><strong>Código:</strong> ${animal.codigo}</p>
+                    <a href="#" class="btn-adotar">Adotar</a>
+                </div>
+            `;
+            section.appendChild(card);
+        });
+    }
+
+    // Função para remover um favorito
+    function removeFavorite(index) {
+        favoritos.splice(index, 1); // Remove do array
+        generateCards(favoritos, 'favoritos-section'); // Atualiza os favoritos exibidos
+        alert('Pet removido dos favoritos!');
+    }
+
+    // Inicializa a exibição dos favoritos ao carregar a página
+    document.addEventListener('DOMContentLoaded', () => {
+        generateCards(favoritos, 'favoritos-section');
+    });
+</script>
+
+</body>
+</html>
