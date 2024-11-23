@@ -5,59 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecopatas</title>
     <link rel="stylesheet" href="stylenovidades.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-        /* Estilos para os cards e paginação */
-        .grid-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .card {
-            width: calc(33.33% - 20px);
-            box-sizing: border-box;
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-        }
-        .card .conteudo {
-            padding: 10px;
-        }
-        .pagination {
-            text-align: center;
-            margin-top: 20px;
-            position: relative;
-            width: 100%;
-        }
-        .pagination button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #008CBA;
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            border-radius: 5px;
-            margin: 0 5px; /* Espaço entre os botões */
-        }
-        .pagination button:hover {
-            background-color: #005f6b;
-        }
-        .pagination button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-        .pagination .page-numbers {
-            display: inline-block;
-            margin: 0 5px; /* Espaço entre os números */
-        }
-        .pagination .page-numbers.active {
-            background-color: #005f6b;
-            color: white;
-        }
-    </style>
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    </style>
+    
 <body>
 
     <!-- Navbar -->
@@ -80,49 +32,65 @@
             <a href="#"><img src="carrinho.png" alt="Carrinho"></a>
             <a href="#"><img src="usuario.png" alt="usuario"></a>
         </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+    <br>
+    <br>
+    <br><br>
+    
 
-    <br><br><br><br><br><br> 
+    <!-- Banner -->
+    <div class="banner-bacana">
+        <h1>Fique por dentro das novidades!</h1>
+        <p>Acompanhe as últimas notícias e atualizações do Ecopatas.</p>
+    </div>
+
+
     <div class="novidades-recentes">
         <h2>Novidades recentes</h2>
         
         <div class="cards">
             <div class="card-grande">
-                <img src="pet1.jpg" alt="Imagem grande">
+                <img src="imagens/falecimento.png" alt="Imagem grande">
                 <div class="conteudo">
-                    <p class="autor">Olivia Rhye • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
+                    <p class="autor"> Equipe Ecopatas • 28 Nov 2024</p>
+                    <h3>Comunicado de Falecimento: Felipe Duarte e Isak Mascarenhas</h3>
+                    <p>É com imenso pesar que o projeto Ecopatas comunica o falecimento de dois de seus queridos membros, Felipe Duarte e Isak Mascarenhas. Ambos foram integrantes dedicados, cujos esforços e contribuições foram fundamentais para o crescimento e sucesso do nosso trabalho. Felipe e Isak deixarão uma marca indelével em todos que tiveram o privilégio de conhecê-los e colaborar com eles. Nossos corações estão com suas famílias, amigos e todos que os admiravam. Eles serão sempre lembrados com carinho e gratidão.</p>
                     <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
+                        <span>#LutoEcopatas</span>
+                        <span>#FelipeEIsak</span>
+                        <span>#DespedidaEcopatas</span>
                     </div>
                 </div>
             </div>
           
             <div class="card-pequeno">
-                <img src="pet3.webp" alt="Imagem pequena 1">
+                <img src="imagens/plantio2.jpg" alt="Imagem pequena 1">
                 <div class="conteudo">
-                    <p class="autor">Phoenix Baker • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
+                    <p class="autor"> Bruno Santos • 25 Set 2024</p>
+                    <h3>Celebração de Adoção: Voluntários Organizam Grande Plantio de Árvores para Comemorar Mil Adoções</h3>
+                    <p>Em uma grande ação de celebração, a ONG Ecopatas organizou um evento de plantio de árvores para comemorar o marco de 1.000 adoções realizadas em 2024. O evento contou com a participação de voluntários, adotantes e crianças de escolas locais, que plantaram diversas mudas nativas em uma área de reflorestamento na região.</p>
                     <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
+                        <span>Plantio</span>
+                        <span>Voluntariado</span>
                     </div>
                 </div>
             </div>
     
             <div class="card-pequeno">
-                <img src="pet3.webp" alt="Imagem pequena 2">
+                <img src="imagens/floreste.jpg" alt="Imagem pequena 2">
                 <div class="conteudo">
-                    <p class="autor">Lana Steiner • 1 Jan 2024</p>
-                    <h3>Título provisório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel purus elit. Donec id suscipit lectus.</p>
+                    <p class="autor"> Icaro Lucena • 9 Ago 2024</p>
+                    <h3>Adoção de Animais Gera Crescimento de Florestas Urbanas em Grandes Cidades</h3>
+                    <p>A cada adoção realizada, uma árvore é plantada em áreas urbanas, transformando espaços antes negligenciados em verdadeiras florestas urbanas. A ONG Ecopatas está revolucionando o conceito de adoção responsável, criando “ilhas verdes” em meio ao concreto das grandes cidades.</p>
                     <div class="tags">
-                        <span>Lorem ipsum</span>
-                        <span>Lorem ipsum</span>
+                        <span>Adoção</span>
+                        
                     </div>
                 </div>
             </div>
@@ -134,125 +102,328 @@
     <br>
     <br>
     <br> 
-
     <div class="todas-novidades">
         <h2>Todas novidades</h2>
+        
+        <div class="grid-cards">
+            <div class="card">
+                <img src="imagens/nativas.jpg" alt="Imagem 1">
+                <div class="conteudo">
+                    <p class="autor">Fernanda Tiemi • 1 Ago 2024</p>
+                    <h3>Ecopatas ultrapassa a marca de 50 espécies nativas plantadas.</h3>
+                    <p>Com o compromisso de restaurar ecossistemas, a ONG diversifica o plantio e promove a preservação da biodiversidade local. 🌳🐾</p>
+                    <div class="tags">
+                        <span>Plantio</span>
 
-        <div class="grid-cards" id="card-container">
-            <!-- Cards serão injetados aqui pelo JS -->
-        </div>
-
-        <!-- Paginação -->
-        <div class="pagination">
-            <button id="prev" onclick="changePage(-1)" disabled>&laquo; Anterior</button>
-            <div class="page-numbers-container">
-                <!-- Os números das páginas serão injetados aqui pelo JS -->
+                    </div>
+                </div>
             </div>
-            <button id="next" onclick="changePage(1)">Próxima &raquo;</button>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h2>Ecopatas.</h2>
-                <p>Av. Águia de Haia, 2633 - Cidade Antônio Estêvão de Carvalho, São Paulo - SP, 03694-000</p>
+            
+            <div class="card">
+                <img src="imagens//crianca.jpeg" alt="Imagem 2">
+                <div class="conteudo">
+                    <p class="autor"> Felipe Duarte • 19 Jul 2024</p>
+                    <h3>"Amigos da Natureza" reúne crianças e animais adotados.</h3>
+                    <p>Projeto promove encontros entre adotantes e plantios coletivos para criar laços com a natureza.</p>
+                    <div class="tags">
+                        <span>Eventos</span>
+                        <span>Adoção</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ongs</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
+    
+            <div class="card">
+                <img src="imagens/escolas.jpeg" alt="Imagem 3">
+                <div class="conteudo">
+                    <p class="autor">Bruno Santos • 3 Jul 2024</p>
+                    <h3>Nova parceria com escolas incentiva adoção responsável</h3>
+                    <p>O projeto passa a visitar escolas para educar crianças sobre o impacto de adotar e plantar árvores.</p>
+                    <div class="tags">
+                        <span>Parcerios</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Ajuda</h3>
-                <ul>
-                    <li><a href="#">Devolução</a></li>
-                    <li><a href="#">Políticas de Privacidade</a></li>
-                </ul>
+    
+            <div class="card">
+                <img src="imagens/foto-cachorro-pet-natal.webp" alt="Imagem 4">
+                <div class="conteudo">
+                    <p class="autor">João Victor • 24 Dez 2023</p>
+                    <h3>Campanha de fim de ano: "Adote um amigo, plante esperança."</h3>
+                    <p>Ecopatas lança campanha especial para dobrar o número de adoções e árvores plantadas até o Natal.</p>
+                    <div class="tags">
+                        <span>Eventos</span>
+                        <span>Campanhas</span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section newsletter">
-                <h3>Newsletter</h3>
-                <input type="email" placeholder="Digite seu e-mail">
-                <button>INSCREVA-SE</button>
-                <div class="footer-icons">
-                    <img src="logo cão e gato.png" alt="Ícone de cachorro e gato">
+    
+            <div class="card">
+                <img src="imagens/voluntarios.jpg" alt="Imagem 5">
+                <div class="conteudo">
+                    <p class="autor">Bruno Santos • 28 Nov 2023</p>
+                    <h3>Voluntários batem recorde em mutirão de plantio.</h3>
+                    <p>Mais de 500 mudas foram plantadas em um único dia, graças ao engajamento de voluntários.</p>
+                    <div class="tags">
+                        <span>Voluntários</span>
+                        <span>Plantios</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="imagens/bosq.jpg" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">Icaro Lucena • 9 Nov 2023</p>
+                    <h3>Primeiro bosque Ecopatas é inaugurado!</h3>
+                    <p>Uma área com 3.000 árvores plantadas pela ONG agora serve como refúgio para pássaros e pequenos animais.</p>
+                    <div class="tags">
+                        <span>Inauguração</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/premio.png" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">João Victor • 18 Out 2023</p>
+                    <h3>Ecopatas ganha prêmio de sustentabilidade animal.</h3>
+                    <p>Reconhecimento pelo impacto positivo no cuidado com animais e restauração ambiental.</p>
+                    <div class="tags">
+                        <span>Prêmios</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/plataforma-online-sucesso.jpg" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">Bruno Santos • 7 Out 2023</p>
+                    <h3>Nova plataforma online facilita adoções e doações.</h3>
+                    <p>Usuários agora podem adotar animais e financiar o plantio de árvores diretamente pelo site da ONG.</p>
+                    <div class="tags">
+                        <span>Plataforma</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/ração.jpg" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">Icaro Lucena • 17 Mai 2023</p>
+                    <h3>Ecopatas doa 1 tonelada de ração em campanha solidária.</h3>
+                    <p>Parte das doações recebidas foi revertida para abrigos e animais resgatados.</p>
+                    <div class="tags">
+                        <span>Doações</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/feira.jpg" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">Fernanda Tiemi • 14 Abr 2023</p>
+                    <h3>Feira de adoção sustentável acontece neste sábado.</h3>
+                    <p>Evento contará com animais para adoção, oficinas de plantio e distribuição de mudas gratuitas.</p>
+                    <div class="tags">
+                        <span>Eventos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/deserto.jpeg" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">Bruno Santos • 22 Mar 2023</p>
+                    <h3>ONG expande atuação para comunidades rurais.</h3>
+                    <p>Ecopatas inicia plantio de árvores em áreas de risco de desertificação no interior do estado.</p>
+                    <div class="tags">
+                        <span>Plantios</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/reuniao.jpg" alt="Imagem 6">
+                <div class="conteudo">
+                    <p class="autor">Isak Mascarenhas • 1 Jan 2023</p>
+                    <h3>Parceria com empresas resulta em 10.000 árvores plantadas.</h3>
+                    <p>Grandes marcas se unem à causa, incentivando adoções com brindes ecológicos.</p>
+                    <div class="tags">
+                        <span>Parceiros</span>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        
+        </div>
+
+        
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h2>Ecopatas.</h2>
+            <p>Av. Águia de Haia, 2633 - Cidade Antônio Estêvão de Carvalho, São Paulo - SP, 03694-000</p>
+          </div>
+          <div class="footer-section">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Ongs</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Ajuda</h3>
+            <ul>
+              <li><a href="#">Devolução</a></li>
+              <li><a href="#">Políticas de Privacidade</a></li>
+            </ul>
+          </div>
+          <div class="footer-section newsletter">
+            <h3>Newsletter</h3>
+            <input type="email" placeholder="Digite seu e-mail">
+            <button>INSCREVA-SE</button>
+            <div class="footer-icons">
+              <img src="logo cão e gato.png" alt="Ícone de cachorro e gato">
+            </div>
+          </div>
+        </div>
         <p class="footer-note">2024 ecopatas. Todos direitos reservados</p>
-    </footer>
-    <script>
-        const cards = [
-            { autor: 'Alec Whitten', data: '1 Jan 2024', titulo: 'Título provisório', descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', tags: ['Lorem ipsum', 'Lorem ipsum', 'Lorem ipsum'], imagem: 'pet1.jpg' },
-            // (restante dos cards)
-        ];
+      </footer>
+      <script>
+        // Configurações de paginação
+        const itemsPerPage = 6; // Número de cards por página
+        const grid = document.querySelector('.grid-cards');
+        const cards = grid.querySelectorAll('.card');
+        const totalPages = Math.ceil(cards.length / itemsPerPage);
     
-        let currentPage = 1;
-        const itemsPerPage = 6;
+        let currentPage = 1; // Página inicial
     
-        function generateCards(page) {
-            const startIndex = (page - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const cardsToDisplay = cards.slice(startIndex, endIndex);
+        // Criar contêineres para navegação
+        const topNavContainer = document.createElement('div'); // Para as setas
+        topNavContainer.className = 'top-nav-container';
     
-            const cardContainer = document.getElementById('card-container');
-            cardContainer.innerHTML = '';
+        const bottomNavContainer = document.createElement('div'); // Para os botões numéricos
+        bottomNavContainer.className = 'bottom-nav-container';
     
-            cardsToDisplay.forEach(card => {
-                const cardElement = document.createElement('div');
-                cardElement.classList.add('card');
-                cardElement.innerHTML = `
-                    <img src="${card.imagem}" alt="Imagem">
-                    <div class="conteudo">
-                        <p class="autor">${card.autor} • ${card.data}</p>
-                        <h3>${card.titulo}</h3>
-                        <p>${card.descricao}</p>
-                        <div class="tags">
-                            ${card.tags.map(tag => `<span>${tag}</span>`).join(' ')}
-                        </div>
-                    </div>
-                `;
-                cardContainer.appendChild(cardElement);
-            });
+        const prevButton = document.createElement('button');
+        prevButton.innerHTML = '&lt;'; // Seta para esquerda
+        prevButton.className = 'nav-button prev';
+        prevButton.addEventListener('click', () => changePage(currentPage - 1));
     
-            document.getElementById('prev').disabled = page === 1;
-            document.getElementById('next').disabled = page * itemsPerPage >= cards.length;
+        const nextButton = document.createElement('button');
+        nextButton.innerHTML = '&gt;'; // Seta para direita
+        nextButton.className = 'nav-button next';
+        nextButton.addEventListener('click', () => changePage(currentPage + 1));
     
-            generatePagination();
+        topNavContainer.appendChild(prevButton);
+        topNavContainer.appendChild(nextButton);
+    
+        // Adicionar botões numéricos na parte inferior
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.textContent = i;
+            button.className = 'page-button';
+            button.addEventListener('click', () => changePage(i));
+            bottomNavContainer.appendChild(button);
         }
     
-        function generatePagination() {
-            const totalPages = Math.ceil(cards.length / itemsPerPage);
-            const pageNumbersContainer = document.querySelector('.page-numbers-container');
-            pageNumbersContainer.innerHTML = '';
+        grid.insertAdjacentElement('beforebegin', topNavContainer); // Setas acima da grade
+        grid.insertAdjacentElement('afterend', bottomNavContainer); // Botões numéricos abaixo da grade
     
-            for (let i = 1; i <= totalPages; i++) {
-                const pageNumber = document.createElement('button');
-                pageNumber.classList.add('page-numbers');
-                if (i === currentPage) {
-                    pageNumber.classList.add('active');
-                }
-                pageNumber.innerText = i;
-                pageNumber.onclick = () => {
-                    currentPage = i;
-                    generateCards(currentPage);
-                };
-                pageNumbersContainer.appendChild(pageNumber);
+        // Função para exibir os itens da página atual
+        function showPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+    
+            // Esconde todos os cards
+            cards.forEach((card, index) => {
+                card.style.display = index >= start && index < end ? 'block' : 'none';
+            });
+    
+            // Atualizar botões ativos
+            document.querySelectorAll('.bottom-nav-container .page-button').forEach((btn, index) => {
+                btn.classList.toggle('active', index === page - 1);
+            });
+    
+            // Atualizar estado dos botões de navegação
+            prevButton.disabled = page === 1;
+            nextButton.disabled = page === totalPages;
+    
+            currentPage = page; // Atualizar página atual
+        }
+    
+        // Função para mudar de página
+        function changePage(page) {
+            if (page >= 1 && page <= totalPages) {
+                showPage(page);
             }
         }
     
-        function changePage(direction) {
-            currentPage += direction;
-            generateCards(currentPage);
-        }
+        // Estilizar navegação
+        const style = document.createElement('style');
+        style.textContent = `
+            /* Contêiner superior (setas) */
+            .top-nav-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+            }
     
-        generateCards(currentPage);
+            /* Contêiner inferior (botões numéricos) */
+            .bottom-nav-container {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                margin: 10px 0;
+            }
+    
+            /* Botões comuns */
+            .nav-button, .page-button {
+                padding: 8px 12px;
+                border: none;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+    
+            /* Botão ativo */
+            .page-button.active {
+                background-color: #798c32;
+                color: white;
+            }
+    
+            /* Hover */
+            .nav-button:hover:not(:disabled), .page-button:hover {
+                background-color: #798c32;
+                color: white;
+            }
+    
+            /* Botões desativados */
+            .nav-button:disabled {
+                background-color: #cccccc;
+                cursor: not-allowed;
+            }
+        `;
+        document.head.appendChild(style);
+    
+        // Mostrar a primeira página inicialmente
+        showPage(1);
     </script>
     
-    
-</body>
-</html>

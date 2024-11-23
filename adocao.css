@@ -192,7 +192,8 @@ footer {
   margin-bottom: 30px;
 }
 
-h2 {
+.galeria h2 {
+  
   text-align: center;
   color: #555;
 }
@@ -281,11 +282,18 @@ h2 {
   margin-top: 30px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  align-items: center; /* Alinha verticalmente */
+  gap: 8px; /* Espaçamento entre os botões */
+  margin-bottom: 16px; /* Espaçamento inferior para não colar com o conteúdo abaixo */
+}
+
 .pagination button {
   background-color: #f4f4f4;
   border: 2px solid #ccc;
   padding: 12px 18px;
-  margin: 0 8px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 50px;
@@ -605,3 +613,28 @@ footer {
   width: 80px;
   opacity: 0.7;
 }
+.Titulo-Gatos {
+
+font-size: 28px;
+font-weight: bold;
+color: #A28F58;
+background-color: #E4D6B6;
+padding: 10px 20px;
+border-radius: 20px;
+margin-bottom: 20px;
+font-family: "Shrikhand", cursive;
+
+}
+
+.Titulo-Caes {
+
+  font-size: 28px;
+  font-weight: bold;
+  color: #A28F58;
+  background-color: #E4D6B6;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-family: "Shrikhand", cursive;
+  }
+
